@@ -3,6 +3,7 @@ import Image from 'next/image'
 import React, { useState, useEffect } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
+import { Scan } from 'lucide-react'
 
 const page = () => {
   return (
@@ -25,6 +26,7 @@ const page = () => {
       <Testimonials></Testimonials>
       <Story></Story>
       <Footer></Footer>
+      <Scanner />
     </div>
   )
 }
@@ -35,7 +37,7 @@ export default page
 
 function Moment() {
   return (
-    <div className='relative w-[90%] h-[500px] rounded-md mx-auto flex justify-center items-center overflow-hidden mt-20'>
+    <div className='relative w-[90%] h-auto py-30 rounded-md mx-auto flex justify-center items-center overflow-hidden mt-20'>
       <Image src="/images/homeback.png" alt="Moment" className='absolute object-cover z-[-1] rotate-180 opacity-40' fill />
       <div className='flex flex-col justify-center items-center gap-10 w-[70%]'>
         <h1 className='text-center text-4xl font-bold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]'>This is your life and it&apos;s ending one moment at a time.</h1>
@@ -52,12 +54,12 @@ function Story() {
       <Image src="/images/homeback.png" alt="Story" className='absolute object-cover z-[-1] rotate-180 opacity-40' fill />
       <h1 className='pt-10 text-center text-4xl font-bold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]'>Story</h1>
       <p className='text-center text-2xl font-bold'>step into better habits with stepps</p>
-      <div className='p-20 flex flex-col md:flex-row justify-center items-center gap-10 mx-auto w-[90%] h-auto transition-all duration-700'>
+      <div className='p-10 flex flex-col lg:flex-row justify-center items-center gap-10 mx-auto  h-auto transition-all duration-700'>
         <div className='flex-1 flex justify-center items-center'>
           <Image src="/images/fit.jpg" alt="Story" className='rounded-md' width={300} height={100} />
         </div>
         <div className='flex-1 flex justify-center items-center'>
-          <div className='w-full  md:h-[300px] bg-green-400 rounded-md flex flex-col justify-center items-center'>
+          <div className='w-full  md:h-[300px] bg-[#16db93] rounded-md flex flex-col justify-center items-center'>
             <div >
               <h1 className='p-10'>Steppps is your friendly fitness buddy, helping you move more, feel better, and make activity part of your daily rhythm. We believe small steps lead to big changes—and we are here to make every step enjoyable, sustainable, and simple.</h1>
             </div>
@@ -130,7 +132,7 @@ function Testimonials() {
       image: "/images/fat.jpg",
       name: "NandGopal",
       role: "Fitness Enthusiast",
-      text: "The fitness social network feature has completely transformed my workout routine. I love connecting with other fitness enthusiasts! "
+      text: "The fitness social network feature has completely transformed my workout routine."
     },
     {
       image: "/images/fit.jpg",
@@ -183,7 +185,7 @@ function Testimonials() {
         </div>
 
         {/* Dynamic Text Content */}
-        <div className='flex-1 flex flex-col justify-center items-center'>
+        <div className='flex-1 w-full h-full flex flex-col justify-center items-center'>
           <h1 className='text-2xl font-semibold text-center transition-opacity duration-300'>
             {testimonials[selectedIndex].text}
           </h1>
@@ -338,14 +340,14 @@ function Journey() {
       <div className='flex justify-center items-center flex-col '>
         <div className='w-[90%] hidden md:flex flex justify-center items-center flex-col gap-10 pb-10'>
           <div className='w-full flex justify-center items-center'>
-            <div className='w-[600px] h-[300px] bg-green-400 rounded-l-md flex justify-center items-center'>
+            <div className='w-[600px] h-[300px] bg-[#a1ef9f] rounded-l-md flex justify-center items-center'>
               <h1 className='px-5'>&quot;I&apos;m doing just fine &mdash; no storms on the horizon, and I plan to keep it that way.&quot;</h1>
             </div>
             <Image src="/images/fit.jpg" alt="Logo" className='rounded-r-md' width={300} height={100} />
           </div>
           <div className='w-full flex justify-center items-center'>
             <Image src="/images/fat.jpg" alt="Logo" className='rounded-l-md' width={300} height={100} />
-            <div className='w-[600px] h-[300px] bg-green-400 rounded-r-md flex justify-center items-center'>
+            <div className='w-[600px] h-[300px] bg-[#a2f2f1] rounded-r-md flex justify-center items-center'>
               <h1 className='px-5'>&quot;Too much sitting, not enough moving &mdash; feeling the energy slump and the extra inches creeping in.&quot;</h1>
             </div>
           </div>
@@ -353,13 +355,13 @@ function Journey() {
         <div className='flex md:hidden flex-col gap-20'>
           <div className='w-full flex flex-col justify-center items-center gap-4'>
             <Image src="/images/fit.jpg" alt="Logo" className='rounded-r-md' width={300} height={100} />
-            <div className='w-[80%] h-[100px] bg-green-400 rounded-l-md flex justify-center items-center'>
+            <div className='w-[80%] h-[100px] bg-[#a1ef9f] rounded-l-md flex justify-center items-center'>
               <h1 className='px-5'>&quot;I&apos;m doing just fine &mdash; no storms on the horizon, and I plan to keep it that way.&quot;</h1>
             </div>
           </div>
           <div className='w-full flex flex-col justify-center items-center gap-4'>
             <Image src="/images/fat.jpg" alt="Logo" className='rounded-r-md' width={300} height={100} />
-            <div className='w-[80%] h-[100px] bg-green-400 rounded-l-md flex justify-center items-center'>
+            <div className='w-[80%] h-[100px] bg-[#a2f2f1] rounded-l-md flex justify-center items-center'>
               <h1 className='px-5'>&quot;Too much sitting, not enough moving &mdash; feeling the energy slump and the extra inches creeping in.&quot;</h1>
             </div>
           </div>
@@ -444,7 +446,7 @@ function Navbar() {
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
         <svg
-          className="w-6 h-6 text-green-400"
+          className="w-6 h-6 text-[#05b37d]"
           fill="none"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -466,17 +468,19 @@ function Navbar() {
         md:flex 
         absolute md:relative 
         top-24 md:top-0 
-        left-0 
-        w-full md:w-auto 
-        bg-white md:bg-transparent 
+        left-1/2 md:left-0
+        -translate-x-1/2 md:translate-x-0
+        w-[90%] md:w-auto
+        bg-[#05b37d] md:bg-transparent 
         shadow-lg md:shadow-none 
         p-4 md:p-0
         flex-col md:flex-row 
         items-center 
         gap-4 md:gap-10
         z-50
+        rounded-md
       `}>
-        <ul className='flex flex-col md:flex-row items-center gap-4 md:gap-10 md:bg-green-400 md:p-2 md:rounded-md md:px-10 md:h-[90px] h-auto font-light'>
+        <ul className='flex flex-col md:flex-row items-center gap-4 md:gap-10 md:bg-[#05b37d] md:p-2 md:rounded-md md:px-10 md:h-[90px] h-auto font-light text-black md:text-black'>
           <li className='hover:text-green-400 transition-colors'><a href="#">Home</a></li>
           <li className='hover:text-green-400 transition-colors'><a href="#">Blog</a></li>
           <li className='hover:text-green-400 transition-colors'><a href="#">Features</a></li>
@@ -484,6 +488,42 @@ function Navbar() {
           <li className='hover:text-green-400 transition-colors'><a href="#">About Us</a></li>
         </ul>
       </nav>
+    </div>
+  )
+}
+
+function Scanner() {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <div className="fixed bottom-8 right-8 z-50">
+      <div
+        className="relative"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        {/* Scanner Icon Button */}
+        <button className="bg-[#05b37d] p-4 rounded-full shadow-lg hover:bg-[#048c63] transition-colors">
+          <Scan className="w-6 h-6 text-white" />
+        </button>
+
+        {/* Hover Content */}
+        {isHovered && (
+          <div className="absolute bottom-16 right-0 bg-white p-4 rounded-lg shadow-xl w-[200px] transition-all duration-300">
+            <div className="relative w-full h-[150px] mb-2">
+              <Image
+                src="/images/scanner.webp"
+                alt="Scanner"
+                fill
+                className="rounded-md object-cover"
+              />
+            </div>
+            <button className="w-full bg-[#05b37d] text-white py-2 rounded-md hover:bg-[#048c63] transition-colors">
+              Try Me
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   )
 }
