@@ -3,7 +3,6 @@ import Image from 'next/image'
 import React, { useState, useEffect } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
-import { imageConfigDefault } from 'next/dist/shared/lib/image-config'
 
 const page = () => {
   return (
@@ -39,8 +38,8 @@ function Moment() {
     <div className='relative w-[90%] h-[500px] rounded-md mx-auto flex justify-center items-center overflow-hidden mt-20'>
       <Image src="/images/homeback.png" alt="Moment" className='absolute object-cover z-[-1] rotate-180 opacity-40' fill />
       <div className='flex flex-col justify-center items-center gap-10 w-[70%]'>
-        <h1 className='text-center text-4xl font-bold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]'>This is your life and it's ending one moment at a time.</h1>
-        <p className='text-center text-2xl font-bold'>Steppps is an app that allows you to build on the habit of 'Walking' and create health outcomes for you!</p>
+        <h1 className='text-center text-4xl font-bold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]'>This is your life and it&apos;s ending one moment at a time.</h1>
+        <p className='text-center text-2xl font-bold'>Steppps is an app that allows you to build on the habit of &apos;Walking&apos; and create health outcomes for you!</p>
         <button className='bg-green-400 text-white px-10 py-2 w-fit rounded-md'>Join us</button>
       </div>
     </div>
@@ -201,35 +200,33 @@ function Testimonials() {
 }
 
 function Walk() {
-
   return (
     <div className='relative mt-20'>
       <div className='flex flex-col gap-10 justify-center items-center'>
         <h1 className='text-center text-4xl font-bold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]'>Walk Together, Bond Stronger</h1>
-        <p className='w-[50%] text-center'>Group Challenges are exclusive fitness journeys designed for private groups. Whether it's your family, friends, colleagues, or a special community, these challenges bring you closer while keeping you on your toes—literally!</p>
+        <p className='w-[50%] text-center'>Group Challenges are exclusive fitness journeys designed for private groups. Whether it&apos;s your family, friends, colleagues, or a special community, these challenges bring you closer while keeping you on your toes&mdash;literally!</p>
         <div className='w-[80%] flex flex-col lg:flex-row justify-between items-center gap-4'>
           <div className='w-[350px] h-[150px] bg-[#9ae8fa] rounded-md flex gap-4 flex-col justify-center items-start p-4'>
             <h1 className='text-2xl font-bold'>By Invite Only</h1>
             <p>
-              These challenges are not listed for everyone. You'll need to know the group's name or have a special code to join.
+              These challenges are not listed for everyone. You&apos;ll need to know the group&apos;s name or have a special code to join.
             </p>
           </div>
           <div className='w-[350px] h-[150px] bg-[#9ae8fa] rounded-md flex gap-4 flex-col justify-center items-start p-4'>
             <h1 className='text-2xl font-bold'>By Invite Only</h1>
             <p>
-              These challenges are not listed for everyone. You'll need to know the group's name or have a special code to join.
+              These challenges are not listed for everyone. You&apos;ll need to know the group&apos;s name or have a special code to join.
             </p>
           </div>
           <div className='w-[350px] h-[150px] bg-[#9ae8fa] rounded-md flex gap-4 flex-col justify-center items-start p-4'>
             <h1 className='text-2xl font-bold'>By Invite Only</h1>
             <p>
-              These challenges are not listed for everyone. You'll need to know the group's name or have a special code to join.
+              These challenges are not listed for everyone. You&apos;ll need to know the group&apos;s name or have a special code to join.
             </p>
           </div>
         </div>
         <button className='bg-green-400 text-white px-10 py-2 w-fit rounded-md'>Start Tracking</button>
       </div>
-
     </div>
   )
 }
@@ -318,7 +315,7 @@ function Cards({ data }: { data: { title: string; description: string; image: st
     <div className='relative w-[250px] h-[400px] bg-green-700 rounded-md flex flex-col justify-center items-end mx-auto'>
       <h1 className='absolute top-0 left-1/2 -translate-x-1/2 mt-4 text-white text-2xl font-bold text-center px-4 '>{data.title}</h1>
       <div className='absolute bottom-0 w-[245px] h-[300px] bg-[#6fdace] rounded-md mb-2 mx-1 flex flex-col items-center justify-between p-4'>
-      
+
         <p className="text-center text-gray-700 font-medium">{data.description}</p>
         <div className="relative w-[200px] h-[200px] mb-4">
           <Image
@@ -339,39 +336,34 @@ function Journey() {
     <div className='w-full relative flex flex-col gap-20 mt-20'>
       <h1 className='block text-4xl text-center pt-8 md:pt-20 font-bold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]'>Every journey starts somewhere, where are you today?</h1>
       <div className='flex justify-center items-center flex-col '>
-
         <div className='w-[90%] hidden md:flex flex justify-center items-center flex-col gap-10 pb-10'>
           <div className='w-full flex justify-center items-center'>
             <div className='w-[600px] h-[300px] bg-green-400 rounded-l-md flex justify-center items-center'>
-              <h1 className='px-5'>"I'm doing just fine - no storms on the horizon, and I plan to keep it that way."</h1>
+              <h1 className='px-5'>&quot;I&apos;m doing just fine &mdash; no storms on the horizon, and I plan to keep it that way.&quot;</h1>
             </div>
             <Image src="/images/fit.jpg" alt="Logo" className='rounded-r-md' width={300} height={100} />
           </div>
           <div className='w-full flex justify-center items-center'>
             <Image src="/images/fat.jpg" alt="Logo" className='rounded-l-md' width={300} height={100} />
             <div className='w-[600px] h-[300px] bg-green-400 rounded-r-md flex justify-center items-center'>
-              <h1 className='px-5'>"Too much sitting, not enough moving — feeling the energy slump and the extra inches creeping in."</h1>
+              <h1 className='px-5'>&quot;Too much sitting, not enough moving &mdash; feeling the energy slump and the extra inches creeping in.&quot;</h1>
             </div>
-
           </div>
-
         </div>
         <div className='flex md:hidden flex-col gap-20'>
           <div className='w-full flex flex-col justify-center items-center gap-4'>
             <Image src="/images/fit.jpg" alt="Logo" className='rounded-r-md' width={300} height={100} />
             <div className='w-[80%] h-[100px] bg-green-400 rounded-l-md flex justify-center items-center'>
-              <h1 className='px-5'>"I'm doing just fine - no storms on the horizon, and I plan to keep it that way."</h1>
+              <h1 className='px-5'>&quot;I&apos;m doing just fine &mdash; no storms on the horizon, and I plan to keep it that way.&quot;</h1>
             </div>
           </div>
           <div className='w-full flex flex-col justify-center items-center gap-4'>
             <Image src="/images/fat.jpg" alt="Logo" className='rounded-r-md' width={300} height={100} />
             <div className='w-[80%] h-[100px] bg-green-400 rounded-l-md flex justify-center items-center'>
-              <h1 className='px-5'>"Too much sitting, not enough moving — feeling the energy slump and the extra inches creeping in."</h1>
+              <h1 className='px-5'>&quot;Too much sitting, not enough moving &mdash; feeling the energy slump and the extra inches creeping in.&quot;</h1>
             </div>
           </div>
         </div>
-
-
       </div>
     </div>
   )
